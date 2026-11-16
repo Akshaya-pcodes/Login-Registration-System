@@ -1,168 +1,122 @@
-# Login Registration System
+Login & Registration System
 
-A secure and user\-friendly Login & Registration System developed to manage user authentication and account creation efficiently. This project demonstrates fundamental authentication concepts, including user registration, login validation, session handling, and secure data management.
+A web-based authentication application developed using Python Flask and SQLite. This project provides user registration and login functionality with secure password hashing and session-based authentication.
 
-## Features
+Overview
+
+The Login & Registration System is designed to provide a simple and user-friendly authentication process. New users can create an account, and registered users can log in to access protected pages.
+
+The application uses Flask for backend development and SQLite for database management.
+
+Features
 
 - User Registration
-- User Login Authentication
-- Form Validation
-- Secure Password Handling
-- Session Management
-- User\-Friendly Interface
-- Responsive Design
-- Error and Success Notifications
+- User Login
+- Password Hashing
+- Session-Based Authentication
+- SQLite Database Integration
+- User Dashboard
+- Form Data Validation
+- Unique Email Validation
 
-## Technologies Used
+Technologies Used
 
-- Frontend: HTML, CSS, JavaScript
-- Backend: PHP
-- Database: MySQL
+Technology| Purpose
+Python| Backend Programming
+Flask| Web Framework
+SQLite| Database
+HTML5| Page Structure
+CSS3| Styling
+JavaScript| Frontend Interactions
 
-Update this section according to the technologies used in your project.
+Project Structure
 
----
-
-## Project Structure
-
-Login\-Registration\-System/
-
+Login-Registration-System/
 │
-
-├── index.php
-
-├── login.php
-
-├── register.php
-
-├── dashboard.php
-
-├── logout.php
-
-├── css/
-
-├── js/
-
-├── assets/
-
+├── app.py
+├── config.py
 ├── database/
-
+│   └── users.db
+│
+├── templates/
+│   ├── index.html
+│   ├── login.html
+│   ├── register.html
+│   └── dashboard.html
+│
+├── static/
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── requirements.txt
+├── .gitignore
 └── README.md
 
----
+Note: Adjust the folder structure above to match the actual project files.
 
-## Installation
+Installation and Setup
 
-### Prerequisites
+1. Clone the Repository
 
-- XAMPP / WAMP / MAMP
-- PHP
-- MySQL
-- Web Browser
+git clone https://github.com/Akshaya-pcodes/Login-Registration-System.git
 
-### Setup Steps
+2. Navigate to the Project Folder
 
-1. Clone the repository:
+cd Login-Registration-System
 
-git clone [https://github.com/Akshaya\-pcodes/Login\-Registration\-System.git](https://github.com/Akshaya-pcodes/Login-Registration-System.git)
+3. Create a Virtual Environment
 
-1. Move the project folder to your server directory:
+python -m venv venv
 
-htdocs/     (XAMPP)
+4. Activate the Virtual Environment
 
-www/        (WAMP)
+Windows PowerShell:
 
-1. Create a new MySQL database.
-2. Import the SQL file provided in the project.
-3. Configure database credentials in the connection file:
+.\venv\Scripts\Activate.ps1
 
-$host = "localhost";
+5. Install Dependencies
 
-$user = "root";
+pip install -r requirements.txt
 
-$password = "";
+6. Run the Application
 
-$database = "your\_database\_name";
+python app.py
 
-1. Start Apache and MySQL.
-2. Open the project in your browser:
+7. Open in Browser
 
-[http://localhost/Login\-Registration\-System](http://localhost/Login-Registration-System)
+http://127.0.0.1:5000
 
----
+Database
 
-## Usage
+SQLite is used to store registered user information.
 
-### Registration
+The application uses password hashing instead of storing plain-text passwords.
 
-- Open the registration page.
-- Enter user details.
-- Submit the form to create a new account.
+Application Workflow
 
-### Login
+1. A new user opens the registration page.
+2. The user enters the required details.
+3. The application validates the submitted information.
+4. The password is hashed before database storage.
+5. Registered users can log in using their credentials.
+6. Successful authentication creates a user session.
+7. The authenticated user can access the dashboard.
 
-- Enter valid credentials.
-- Access the system securely.
-- Logout when finished.
+Future Improvements
 
----
-
-## Security Features
-
-- Password Validation
-- Input Sanitization
-- Session\-Based Authentication
-- SQL Injection Prevention
-- Secure User Login Flow
-
----
-
-## Future Enhancements
-
-- Email Verification
 - Password Reset Functionality
-- Two\-Factor Authentication (2FA)
+- Email Verification
+- Improved Input Validation
 - User Profile Management
-- Role\-Based Access Control
-- OAuth Login (Google/GitHub)
+- Enhanced Authentication Security
+
+Author
+
+Akshaya P
+
+GitHub: https://github.com/Akshaya-pcodes
 
 ---
 
-## Learning Objectives
-
-This project was developed to understand:
-
-- Authentication Systems
-- Database Connectivity
-- Form Handling
-- Session Management
-- Full\-Stack Web Development Concepts
-
----
-
-## Contributing
-
-Contributions are welcome.
-
-1. Fork the repository
-2. Create a new feature branch
-3. Commit your changes
-4. Push to your branch
-5. Open a Pull Request
-
----
-
-## Author
-
-**Akshaya**
-
-GitHub: [https://github.com/Akshaya\-pcodes](https://github.com/Akshaya-pcodes)
-
----
-
-## License
-
-This project is licensed under the MIT License.
-
-Feel free to use, modify, and distribute this project for educational purposes.
-
+Developed as a hands-on web development project to understand backend development, database integration, and authentication workflows.
